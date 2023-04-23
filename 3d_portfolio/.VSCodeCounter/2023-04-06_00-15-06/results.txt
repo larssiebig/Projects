@@ -1,0 +1,65 @@
+Date : 2023-04-06 00:15:06
+Directory : c:\Users\Lars\Documents\Code\3d_portfolio\src
+Total : 28 files,  1419 codes, 7 comments, 166 blanks, all 1592 lines
+
+Languages
++----------------+------------+------------+------------+------------+------------+
+| language       | files      | code       | comment    | blank      | total      |
++----------------+------------+------------+------------+------------+------------+
+| JavaScript JSX |         16 |        835 |          5 |        122 |        962 |
+| JavaScript     |          7 |        376 |          0 |         30 |        406 |
+| CSS            |          1 |        190 |          2 |         13 |        205 |
+| XML            |          4 |         18 |          0 |          1 |         19 |
++----------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                          | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                             |         28 |      1,419 |          7 |        166 |      1,592 |
+| . (Files)                                                                     |          4 |        235 |          2 |         24 |        261 |
+| assets                                                                        |          5 |         70 |          0 |          6 |         76 |
+| assets (Files)                                                                |          4 |         59 |          0 |          5 |         64 |
+| assets\tech                                                                   |          1 |         11 |          0 |          1 |         12 |
+| components                                                                    |         15 |        813 |          5 |        115 |        933 |
+| components (Files)                                                            |         10 |        614 |          0 |         78 |        692 |
+| components\canvas                                                             |          5 |        199 |          5 |         37 |        241 |
+| constants                                                                     |          1 |        194 |          0 |          9 |        203 |
+| hoc                                                                           |          2 |         23 |          0 |          7 |         30 |
+| utils                                                                         |          1 |         84 |          0 |          5 |         89 |
++-------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| filename                                                                      | language       | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| c:\Users\Lars\Documents\Code\3d_portfolio\src\App.jsx                         | JavaScript JSX |         24 |          0 |          4 |         28 |
+| c:\Users\Lars\Documents\Code\3d_portfolio\src\assets\close.svg                | XML            |          3 |          0 |          0 |          3 |
+| c:\Users\Lars\Documents\Code\3d_portfolio\src\assets\index.js                 | JavaScript     |         52 |          0 |          5 |         57 |
+| c:\Users\Lars\Documents\Code\3d_portfolio\src\assets\logo.svg                 | XML            |          1 |          0 |          0 |          1 |
+| c:\Users\Lars\Documents\Code\3d_portfolio\src\assets\menu.svg                 | XML            |          3 |          0 |          0 |          3 |
+| c:\Users\Lars\Documents\Code\3d_portfolio\src\assets\tech\threejs.svg         | XML            |         11 |          0 |          1 |         12 |
+| c:\Users\Lars\Documents\Code\3d_portfolio\src\components\About.jsx            | JavaScript JSX |         58 |          0 |          8 |         66 |
+| c:\Users\Lars\Documents\Code\3d_portfolio\src\components\Contact.jsx          | JavaScript JSX |        122 |          0 |         16 |        138 |
+| c:\Users\Lars\Documents\Code\3d_portfolio\src\components\Experience.jsx       | JavaScript JSX |         78 |          0 |          8 |         86 |
+| c:\Users\Lars\Documents\Code\3d_portfolio\src\components\Feedbacks.jsx        | JavaScript JSX |         59 |          0 |          8 |         67 |
+| c:\Users\Lars\Documents\Code\3d_portfolio\src\components\Hero.jsx             | JavaScript JSX |         44 |          0 |          7 |         51 |
+| c:\Users\Lars\Documents\Code\3d_portfolio\src\components\Loader.jsx           | JavaScript JSX |         29 |          0 |          3 |         32 |
+| c:\Users\Lars\Documents\Code\3d_portfolio\src\components\Navbar.jsx           | JavaScript JSX |         92 |          0 |         11 |        103 |
+| c:\Users\Lars\Documents\Code\3d_portfolio\src\components\Tech.jsx             | JavaScript JSX |         16 |          0 |          4 |         20 |
+| c:\Users\Lars\Documents\Code\3d_portfolio\src\components\Works.jsx            | JavaScript JSX |         91 |          0 |         10 |        101 |
+| c:\Users\Lars\Documents\Code\3d_portfolio\src\components\canvas\Ball.jsx      | JavaScript JSX |         55 |          0 |          7 |         62 |
+| c:\Users\Lars\Documents\Code\3d_portfolio\src\components\canvas\Computers.jsx | JavaScript JSX |         62 |          5 |         13 |         80 |
+| c:\Users\Lars\Documents\Code\3d_portfolio\src\components\canvas\Earth.jsx     | JavaScript JSX |         39 |          0 |          7 |         46 |
+| c:\Users\Lars\Documents\Code\3d_portfolio\src\components\canvas\Stars.jsx     | JavaScript JSX |         38 |          0 |          8 |         46 |
+| c:\Users\Lars\Documents\Code\3d_portfolio\src\components\canvas\index.js      | JavaScript     |          5 |          0 |          2 |          7 |
+| c:\Users\Lars\Documents\Code\3d_portfolio\src\components\index.js             | JavaScript     |         25 |          0 |          3 |         28 |
+| c:\Users\Lars\Documents\Code\3d_portfolio\src\constants\index.js              | JavaScript     |        194 |          0 |          9 |        203 |
+| c:\Users\Lars\Documents\Code\3d_portfolio\src\hoc\SectionWrapper.jsx          | JavaScript JSX |         21 |          0 |          5 |         26 |
+| c:\Users\Lars\Documents\Code\3d_portfolio\src\hoc\index.js                    | JavaScript     |          2 |          0 |          2 |          4 |
+| c:\Users\Lars\Documents\Code\3d_portfolio\src\index.css                       | CSS            |        190 |          2 |         13 |        205 |
+| c:\Users\Lars\Documents\Code\3d_portfolio\src\main.jsx                        | JavaScript JSX |          7 |          0 |          3 |         10 |
+| c:\Users\Lars\Documents\Code\3d_portfolio\src\styles.js                       | JavaScript     |         14 |          0 |          4 |         18 |
+| c:\Users\Lars\Documents\Code\3d_portfolio\src\utils\motion.js                 | JavaScript     |         84 |          0 |          5 |         89 |
+| Total                                                                         |                |      1,419 |          7 |        166 |      1,592 |
++-------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+

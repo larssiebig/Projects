@@ -1,0 +1,6 @@
+**node_modules
+.DS_Store
+.env
+**tailwind.config.js
+**yarn.lock
+**yarn-error.log
