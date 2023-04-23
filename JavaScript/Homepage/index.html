@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  
+<div class="sidebar">
+    <div class="logo-details">
+        <i class='bx bxl-javascript icon'></i>
+        <div class="logo_name">Lars Siebig</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+
+    <ul class="nav-list">
+      <li>
+         <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search...">
+         <span class="tooltip">Search</span>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+         <span class="tooltip">Dashboard</span>
+      </li>
+
+      <li>
+       <a href="#">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">About Me</span>
+       </a>
+       <span class="tooltip">About Me</span>
+      </li>
+     
+     <li>
+       <a href="#" onclick="toggleSettings()">
+         <i class='bx bx-cog' ></i>
+         <span class="links_name">Settings</span>
+       </a>
+       <span class="tooltip">Settings</span>
+     </li>
+
+     <li>
+      <a href="#">
+        <i class='bx bx-envelope' ></i>
+        <span class="links_name">Contact</span>
+      </a>
+      <span class="tooltip">Contact</span>
+    </li>
+
+     <li class="profile">
+         <div class="profile-details">
+           <div class="name_job">
+             <div class="name">Lars Siebig</div>
+             <div class="job">Admin</div>
+           </div>
+         </div>
+         <i class='bx bx-log-out' id="log_out" ></i>
+     </li>
+    </ul>
+</div>
+
+
+
+  <script src="app.js"></script>
+
+  <section class="home-section">
+      <div class="text">Dashboard</div>
+  </section>
+
+</body>
+</html>
