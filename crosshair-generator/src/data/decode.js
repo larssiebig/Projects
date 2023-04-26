@@ -49,7 +49,7 @@ function parseBytes(bytes) {
     };
   }
   
-  const decode = shareCode => {
+  export const decode = shareCode => {
     if (!shareCode.match(SHARECODE_PATTERN)) {
       throw new Error('Invalid share code');
     }
@@ -64,5 +64,3 @@ function parseBytes(bytes) {
     
     return parseBytes(bigNumberToByteArray(big));
   }
-
-console.log(decode('CSGO-j3Up6-uikBW-jU6U2-PPbuC-twDmQ'))

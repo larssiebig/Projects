@@ -1,29 +1,6 @@
 const DICTIONARY = "ABCDEFGHJKLMNOPQRSTUVWXYZabcdefhijkmnopqrstuvwxyz23456789";
 const DICTIONARY_LENGTH = BigInt(DICTIONARY.length);
 
-const example = {
-    cl_crosshairgap: -2,
-    cl_crosshair_outlinethickness: 1.5,
-    cl_crosshaircolor_r: 50,
-    cl_crosshaircolor_g: 250,
-    cl_crosshaircolor_b: 84,
-    cl_crosshairalpha: 200,
-    cl_crosshair_dynamic_splitdist: 127,
-    cl_fixedcrosshairgap: -10,
-    cl_crosshaircolor: 5,
-    cl_crosshair_drawoutline: 0,
-    cl_crosshair_dynamic_splitalpha_innermod: 0.6,
-    cl_crosshair_dynamic_splitalpha_outermod: 0.8,
-    cl_crosshair_dynamic_maxdist_splitratio: 0.3,
-    cl_crosshairthickness: 4.1,
-    cl_crosshairstyle: 2,
-    cl_crosshairdot: 1,
-    cl_crosshairgap_useweaponvalue: 0,
-    cl_crosshairusealpha: 0,
-    cl_crosshair_t: 1,
-    cl_crosshairsize: 33
-  }
-
 const serializeToBytes = info => {
     const bytes = [
         0,
@@ -62,7 +39,7 @@ const serializeToBytes = info => {
     return bytes;
 };
 
-const encode = info => {
+export const encode = info => {
     const bytes = serializeToBytes(info);
     
     let acc = 0n;
@@ -81,5 +58,3 @@ const encode = info => {
     
     return `CSGO-${result.slice(0, 5)}-${result.slice(5, 10)}-${result.slice(10, 15)}-${result.slice(15, 20)}-${result.slice(20, 25)}`;
 };
-
-console.log(encode(example));
