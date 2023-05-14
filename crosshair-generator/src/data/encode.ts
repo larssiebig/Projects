@@ -1,7 +1,32 @@
 const DICTIONARY = "ABCDEFGHJKLMNOPQRSTUVWXYZabcdefhijkmnopqrstuvwxyz23456789";
 const DICTIONARY_LENGTH = BigInt(DICTIONARY.length);
 
-const serializeToBytes = info => {
+type Info = {
+  cl_crosshairgap: number;
+  cl_crosshair_outlinethickness: number;
+  cl_crosshaircolor_r: number;
+  cl_crosshaircolor_g: number;
+  cl_crosshaircolor_b: number;
+  cl_crosshairalpha: number;
+  cl_crosshair_dynamic_splitdist: number;
+  cl_fixedcrosshairgap: number;
+  cl_crosshaircolor: number;
+  cl_crosshair_drawoutline: boolean;
+  cl_crosshair_dynamic_splitalpha_innermod: number;
+  cl_crosshair_dynamic_splitalpha_outermod: number;
+  cl_crosshair_dynamic_maxdist_splitratio: number;
+  cl_crosshairthickness: number;
+  cl_crosshairstyle: number;
+  cl_crosshairdot: boolean;
+  cl_crosshairgap_useweaponvalue: boolean;
+  cl_crosshairusealpha: boolean;
+  cl_crosshair_t: boolean;
+  cl_crosshairsize: number;
+};
+
+
+
+const serializeToBytes = (info : Info): number[] => {
     const bytes = [
         0,
         1,
@@ -30,23 +55,20 @@ const serializeToBytes = info => {
         0
     ];
 
-    let sum = 0;
-    for (let i = 1; i < bytes.length; ++i) {
-        sum += bytes[i];
-    }
+    const sum = bytes.slice(1).reduce((acc, byte) => acc + byte, 0);
     bytes[0] = sum & 0xff;
 
     return bytes;
 };
 
-export const encode = info => {
+export const encode = (info: Info): string => {
     const bytes = serializeToBytes(info);
     
-    let acc = 0n;
-    let pos = 1n;
-    for (let i = bytes.length; i --> 0;) {
-        acc += BigInt(bytes[i]) * pos;
-        pos *= 256n;
+    let acc = BigInt(0);
+    let pos = BigInt(1);
+    for (let i = bytes.length - 1; i >= 0; i--) {
+      acc += BigInt(bytes[i]) * pos;
+      pos *= 256n;
     }
     
     let result = '';

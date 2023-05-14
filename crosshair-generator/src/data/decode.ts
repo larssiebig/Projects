@@ -5,18 +5,42 @@ const DICTIONARY = 'ABCDEFGHJKLMNOPQRSTUVWXYZabcdefhijkmnopqrstuvwxyz23456789';
 const DICTIONARY_LENGTH = DICTIONARY.length;
 const SHARECODE_PATTERN = /CSGO(-?[\w]{5}){5}$/;
 
-function bigNumberToByteArray(big) {
-  const str = big.toString(16).padStart(36, '0');
-  const bytes = [];
+interface CrosshairData {
+  cl_crosshairgap: number;
+  cl_crosshair_outlinethickness: number;
+  cl_crosshaircolor_r: number;
+  cl_crosshaircolor_g: number;
+  cl_crosshaircolor_b: number;
+  cl_crosshairalpha: number;
+  cl_crosshair_dynamic_splitdist: number;
+  cl_fixedcrosshairgap: number;
+  cl_crosshaircolor: number;
+  cl_crosshair_drawoutline: number;
+  cl_crosshair_dynamic_splitalpha_innermod: number;
+  cl_crosshair_dynamic_splitalpha_outermod: number;
+  cl_crosshair_dynamic_maxdist_splitratio: number;
+  cl_crosshairthickness: number;
+  cl_crosshairstyle: number;
+  cl_crosshairdot: number;
+  cl_crosshairgap_useweaponvalue: number;
+  cl_crosshairusealpha: number;
+  cl_crosshair_t: number;
+  cl_crosshairsize: number;
+}
+
+function bigNumberToByteArray(big: BigNumber): number[] {
+  const str : string = big.toString(16).padStart(36, '0');
+  const bytes : number[] = [];
   for (let i = 0; i < str.length; i += 2) {
-    bytes.push(parseInt(str.slice(i, i + 2), 16));
+    const end = i+2;
+    bytes.push(parseInt(str.slice(i, end), 16));
   }
 
   return bytes;
 }
 
 
-function parseBytes(bytes) {
+function parseBytes(bytes: number[]): CrosshairData {
     return {
       cl_crosshairgap: Int8Array.of(bytes[2])[0] / 10.0,
   
@@ -55,7 +79,7 @@ function parseBytes(bytes) {
     }
   
     shareCode = shareCode.replace(/CSGO|-/g, '');
-    const chars = Array.from(shareCode).reverse();
+    const chars : any = Array.from(shareCode).reverse();
     let big = new BigNumber(0);
   
     for (let i = 0; i < chars.length; i++) {
@@ -64,3 +88,4 @@ function parseBytes(bytes) {
     
     return parseBytes(bigNumberToByteArray(big));
   }
+  

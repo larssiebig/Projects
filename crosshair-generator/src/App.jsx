@@ -1,12 +1,14 @@
-import SettingsMenu from './components/SettingsMenu.jsx'
-
+import StyleMenu from './components/styleMenu.tsx'
+import ColorMenu from './components/colorMenu.tsx'
 
 const App = () => {
 
   return (
-    <SettingsMenu/>
+    <div>  
+      <StyleMenu/>
+      <ColorMenu/>
+    </div>
   )
-  
 }
 
 export default App
